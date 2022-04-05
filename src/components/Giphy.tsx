@@ -6,7 +6,6 @@ export default function Giphy(props: { giphy: giphy }) {
   const { giphy } = props;
   const [openPopup, setOpenPopup] = useState<boolean>(false);
   const handleClickPopup = () => {
-    console.log("Iam here");
     setOpenPopup(true);
   };
   return (

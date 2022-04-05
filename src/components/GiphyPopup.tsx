@@ -11,40 +11,40 @@ export default function GiphyPopup(props: { giphy: giphy; handleClose: any }) {
           x
         </span>
         <div style={{textAlign: "center"}}>
-          <div>
+          <div data-testId = "giphy-popup-title">
             <h2>{giphy.title}</h2>
           </div>
           <div className="giphy-img-div">
-            <img
+            <img data-testId = "giphy-popup-img"
               className="giphy-img"
               src={giphy?.images?.fixed_height?.url}
               alt={giphy.title}
             />
           </div>
           <div className="giphy-details-div">
-            <span>
+            <span >
               <p>
-                <a href={giphy.bitly_gif_url}>bitly gif url</a>
+                <a href={giphy.bitly_gif_url} data-testId = "giphy-popup-url-1">bitly gif url</a>
               </p>
             </span>
             <span>
               <p>
-                <a href={giphy.bitly_url}>bitly url</a>
+                <a href={giphy.bitly_url} data-testId = "giphy-popup-url-2">bitly url</a>
               </p>
             </span>
             <span>
               <p>
-                <a href={giphy.import_datetime}>imported time</a>
+                <a href={giphy.import_datetime} data-testId = "giphy-popup-time">imported time</a>
               </p>
             </span>
             <span>
               <p>
-                <a href={giphy.type}>type</a>
+                <a href={giphy.type} data-testId = "giphy-popup-type">type</a>
               </p>
             </span>
             <span>
               <p>
-                <a href={giphy.url}>url</a>
+                <a href={giphy.url} data-testId = "giphy-popup-url-3">url</a>
               </p>
             </span>
           </div>
