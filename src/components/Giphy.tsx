@@ -16,7 +16,7 @@ export default function Giphy(props: { giphy: giphy }) {
         width={200}
         src={giphy?.images?.fixed_height?.url}
         onClick={handleClickPopup}
-        data-testId={`img-${giphy.url}`}
+        data-testid={`img-${giphy.url}`}
       />
       {openPopup && (
         <GiphyPopup giphy={giphy} handleClose={()=>setOpenPopup(false)} />

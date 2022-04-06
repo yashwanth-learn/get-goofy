@@ -9,12 +9,9 @@ export default function Home() {
   const [getMoreGiphys, setGetMoreGiphys] = useState<boolean>(true);
   const handleGetGiphy = async () => {
     const data = await fetchGiphy(offSet);
-    console.log(data);
-
     const updatedGiphys = giphys.concat(data.data);
     setGiphys(updatedGiphys);
     setOffSet(offSet + 50);
-    console.log(giphys);
   };
   const handleScroll = () => {
     if (!(window.innerHeight + window.scrollY <= document.body.scrollHeight)) {
