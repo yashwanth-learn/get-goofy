@@ -31,7 +31,7 @@ describe("test giphy popup", () => {
     const bitlyUrl = screen.getByText("bitly url");
     const importDate = screen.getByText("imported time");
     const type = screen.getByText("type");
-    const url = screen.getByText("url");
+    const url = screen.getByText("giphy url");
 
     expect(img).toBeInTheDocument();
     expect(title).toBeInTheDocument();

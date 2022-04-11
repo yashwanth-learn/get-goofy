@@ -11,42 +11,37 @@ export default function GiphyPopup(props: { giphy: giphy; handleClose: any }) {
           x
         </span>
         <div style={{textAlign: "center"}}>
-          <div data-testId = "giphy-popup-title">
+          <div data-testid = "giphy-popup-title">
             <h2>{giphy.title}</h2>
           </div>
           <div className="giphy-img-div">
-            <img data-testId = "giphy-popup-img"
+            <img data-testid = "giphy-popup-img"
               className="giphy-img"
               src={giphy?.images?.fixed_height?.url}
               alt={giphy.title}
             />
           </div>
           <div className="giphy-details-div">
-            <span >
-              <p>
-                <a href={giphy.bitly_gif_url} data-testId = "giphy-popup-url-1">bitly gif url</a>
-              </p>
-            </span>
-            <span>
-              <p>
-                <a href={giphy.bitly_url} data-testId = "giphy-popup-url-2">bitly url</a>
-              </p>
-            </span>
-            <span>
-              <p>
-                <a href={giphy.import_datetime} data-testId = "giphy-popup-time">imported time</a>
-              </p>
-            </span>
-            <span>
-              <p>
-                <a href={giphy.type} data-testId = "giphy-popup-type">type</a>
-              </p>
-            </span>
-            <span>
-              <p>
-                <a href={giphy.url} data-testId = "giphy-popup-url-3">url</a>
-              </p>
-            </span>
+            <table className="giphy-details-table">
+              <thead>
+                <tr>
+                  <th>bitly gif url</th>
+                  <th>bitly url</th>
+                  <th>imported time</th>
+                  <th>type</th>
+                  <th>giphy url</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href={giphy.bitly_gif_url} data-testid = "giphy-popup-url-1">bitly gif</a></td>
+                  <td><a href={giphy.bitly_url} data-testid = "giphy-popup-url-2">bitly</a></td>
+                  <td>{giphy.import_datetime}</td>
+                  <td>{giphy.type}</td>
+                  <td><a href={giphy.url} data-testid = "giphy-popup-url-3">url</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
